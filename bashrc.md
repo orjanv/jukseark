@@ -1,4 +1,4 @@
-#bash
+# bash
 
 ## .bashrc oppføringer
 

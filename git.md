@@ -1,4 +1,4 @@
-# Git tips and tricks
+# Git
 
 ## Setup name and email
 
