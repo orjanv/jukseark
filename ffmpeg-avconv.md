@@ -8,3 +8,9 @@
 
 ## convert a video to gif using ffmpeg and gifsicle
     ffmpeg -i in.mov -s 600x400 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > out.gif
+
+## Faster video speed
+    ffmpeg -i input.mp4 -filter:v "setpts=0.5*PTS" output.mp4
+
+## Slower Video Speed
+    ffmpeg -i input.mp4 -filter:v "setpts=2*PTS" output.mp4
