@@ -14,3 +14,7 @@
 
 ## Slower Video Speed
     ffmpeg -i input.mp4 -filter:v "setpts=2*PTS" output.mp4
+
+## You remove audio by using the -an flag.
+    ffmpeg -i $input_file -c copy -an $output_file
+
