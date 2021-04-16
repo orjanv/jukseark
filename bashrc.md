@@ -15,7 +15,8 @@
     alias bashrc='pico ~/.bashrc && source ~/.bashrc'
     alias apt-get='sudo apt-get'
     alias record="arecord -vv -fcd"
-
+    alias oppgradering="sudo apt update && sudo apt -y upgrade"
+    
 ## Loops
 
 ### Bash script to batch change multiple files and numbering them
