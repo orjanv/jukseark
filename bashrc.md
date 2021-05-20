@@ -41,3 +41,16 @@
 
 ### Extract a specific string from all links in a webpage using curl, grep and sed
     curl "http://www.gutenberg.org/wiki/Adventure_(Bookshelf)" | grep "www.gutenberg.org/ebooks/" | sed 's/.*ebooks\///' | sed 's/" class=.*//' > gutenberg-adventure-bookids.txt
+
+### Function to create png-images from terminal command output
+
+    term2png ()
+      {
+        $1 > /tmp/ansicommand.ansi
+        ansifilename="ansicommand-"$(date +"%Y-%m-%d_%H%M")".png"
+        ansilove -f terminus -q -o $ansifilename /tmp/ansicommand.ansi
+        rm /tmp/ansicommand.ansi
+        xclip -selection clipboard -t image/png -i $ansifilename
+        xdg-open $ansifilename
+      }
+

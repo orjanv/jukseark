@@ -47,3 +47,5 @@
 ## Convert 10-bit H.265 to 8-bit H.264
    ffmpeg -i input -c:v libx264 -crf 18 -vf format=yuv420p -c:a copy output.mkv
 
+## Convert multiple .webm audio files to .mp3 in one go
+   find -name "*.webm" -exec ffmpeg -i {} -acodec libmp3lame -ab 128k {}.mp3 \;
