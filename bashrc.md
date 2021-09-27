@@ -62,3 +62,12 @@
 ### Print hostname in ascii art when terminal opens
 
     figlet -f ~/Development/figlet/fonts/3d.flf -w 200 `hostname`; printf "\n"
+
+
+### Rename all files into numerical ones
+
+    ls -v | cat -n | while read n f; do mv -n "$f" "$n.jpg"; done
+
+### Create thumbnails of files
+
+    for f in *.jpg; do convert $f -resize 480x480 thumbs/$f; done
