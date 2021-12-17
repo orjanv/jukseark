@@ -15,7 +15,7 @@ If the previous step worked for you, persist that configuration (otherwise the p
     echo "options snd_hda_intel power_save=0" | sudo tee -a /etc/modprobe.d/audio_disable_powersave.conf
 
 
-* Source: https://askubuntu.com/questions/1230833/annoying-click-popping-sound-on-ubuntu-20-04
+Source: https://askubuntu.com/questions/1230833/annoying-click-popping-sound-on-ubuntu-20-04
 
 
 ### Make Imagemagick allow writing to PDF
@@ -30,3 +30,5 @@ Open /etc/ImageMagick-X/policy.xml with your favorite text editor, find the line
 Find and edit the line to read:
 
     <policy domain="coder" rights="none" pattern="PDF" />
+
+Source: https://askubuntu.com/questions/1127260/imagemagick-convert-not-allowed
