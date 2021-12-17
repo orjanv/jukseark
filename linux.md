@@ -23,12 +23,10 @@ Source: https://askubuntu.com/questions/1230833/annoying-click-popping-sound-on-
 ImageMagick has some security policies disabling some rights for security reasons. See why at the bottom of this answer.
 You will have to edit a config file to re-enble the action you need.
 
-Open /etc/ImageMagick-X/policy.xml with your favorite text editor, find the line <policy domain="coder" rights="none" pattern="PDF" /> and replace "none" by "read|write"
-
-    sudo nano /etc/ImageMagick-6/policy.xml
-
-Find and edit the line to read:
+Open /etc/ImageMagick-X/policy.xml with your favorite text editor, find the line
 
     <policy domain="coder" rights="none" pattern="PDF" />
+
+and replace "none" by "read|write"
 
 Source: https://askubuntu.com/questions/1127260/imagemagick-convert-not-allowed
