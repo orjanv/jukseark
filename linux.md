@@ -6,7 +6,7 @@ Verify how is your sound card's power_save parameter:
 
     cat /sys/module/snd_hda_intel/parameters/power_save
 
-If it returns 1, do the following to change it temporally:
+If it returns `1`, do the following to change it temporally:
 
     echo "0" | sudo tee /sys/module/snd_hda_intel/parameters/power_save
 
