@@ -8,3 +8,8 @@
 
 ## Make a collage of images with five columns and fill automatically numbers of rows
     montage -geometry +0+0 -tile 5x *.jpg result.jpg
+
+## allow writing to PDF
+    sudo sed -i_bak \
+    's/rights="none" pattern="PDF"/rights="read | write" pattern="PDF"/' \
+    /etc/ImageMagick-6/policy.xml
