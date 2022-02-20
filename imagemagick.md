@@ -13,3 +13,8 @@
     sudo sed -i_bak \
     's/rights="none" pattern="PDF"/rights="read | write" pattern="PDF"/' \
     /etc/ImageMagick-6/policy.xml
+
+## Convert Single Page of PDF File to Image
+To convert a single page of PDF to image, use the following command:
+
+    convert -density 150 presentation.pdf[0] -quality 90 test.jpg
