@@ -14,4 +14,5 @@
     set tabsize 4
     set tabstospaces
     set mouse
+    set softwrap
     set backupdir "/home/hoyd/Documents/nano-backups"
