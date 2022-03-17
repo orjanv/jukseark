@@ -71,3 +71,10 @@
 ### Create thumbnails of files
 
     for f in *.jpg; do convert $f -resize 480x480 thumbs/$f; done
+
+### mkcd funksjon i bash
+
+    mkcd ()
+    {
+        mkdir -p -- "$1" && cd -P -- "$1"
+    }
