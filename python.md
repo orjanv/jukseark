@@ -2,10 +2,9 @@
 
 ### Run a web server from current directory on port 8080
 
+By default, this server will be listening on all interfaces and on port 8080
+
     python3 -m http.server 8080
-
-By default, this server will be listening on all interfaces and on port 8080, but only be accessible from the same computer.
-
 
 ### Run a web server from any directory with -directory
 
@@ -13,7 +12,7 @@ As of Python 3.7, you can use the -directory flag to serve files from a director
 
     python3 -m http.server -directory /path/to/folder 8080
 
-### Run a web server that can be reached by other computers
+### Run a web server
 
     import http.server
     import socketserver
@@ -26,7 +25,7 @@ As of Python 3.7, you can use the -directory flag to serve files from a director
         print("serving at port", PORT)
         httpd.serve_forever()
 
-### Log traffic to a file
+### Web server and log traffic to a file
 
     import http.server
     import socketserver
