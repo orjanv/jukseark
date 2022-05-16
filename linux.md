@@ -30,3 +30,23 @@ Open /etc/ImageMagick-X/policy.xml with your favorite text editor, find the line
 and replace "none" by "read|write"
 
 Source: https://askubuntu.com/questions/1127260/imagemagick-convert-not-allowed
+
+
+### Get size of terminal
+
+Using environment variables
+
+    echo "$LINES $COLUMNS"
+    37 107
+
+Using command tput
+
+    tput lines cols
+    37
+    107
+
+Using command stty
+
+    stty size
+    37 107
+
