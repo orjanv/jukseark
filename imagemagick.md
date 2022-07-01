@@ -3,6 +3,10 @@
 ## Resize all .png-images
     for f in *.png; do convert $f -resize 1000x900 1000px_$f; done
 
+## Convert multiple image from eps til png
+
+    for f in *.eps; do convert ${f%.eps}.png; done
+
 ## Create a video from a set of images
     ffmpeg -pattern_type glob -i '*.jpg' -pix_fmt yuv420p out.mp4
 
