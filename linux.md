@@ -50,3 +50,18 @@ Using command stty
     stty size
     37 107
 
+
+### pactl command is used to control a running PulseAudio sound server.
+
+Increase volume by 10%
+
+    pactl -- set-sink-volume 0 +10%
+
+Decrease volume by 10%
+
+    pactl -- set-sink-volume 0 -10%
+
+Set volume to 80%
+
+    pactl -- set-sink-volume 0 80%
+
