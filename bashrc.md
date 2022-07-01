@@ -31,6 +31,10 @@
       I=$((I + 1))
     done
 
+### Run a script n times
+
+    for f in {1..50}; do python3 trees.py $f; done
+
 ## file manipulating and regexp
 
 ### Bash script to replace spaces in file names
@@ -78,3 +82,7 @@
     {
         mkdir -p -- "$1" && cd -P -- "$1"
     }
+
+### cheat function to look up commands
+
+    function cheat() { curl cht.sh/$1 }
