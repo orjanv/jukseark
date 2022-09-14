@@ -4,7 +4,6 @@
     for f in *.png; do convert $f -resize 1000x900 1000px_$f; done
 
 ## Convert multiple image from eps til png
-
     for f in *.eps; do convert ${f%.eps}.png; done
 
 ## Create a video from a set of images
@@ -22,3 +21,7 @@
 To convert a single page of PDF to image, use the following command:
 
     convert -density 150 presentation.pdf[0] -quality 90 test.jpg
+
+## Replace transparency in PNG images with white background
+    convert image.png -background white -alpha remove -alpha off white.png
+

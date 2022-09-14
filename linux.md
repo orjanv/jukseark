@@ -65,3 +65,8 @@ Set volume to 80%
 
     pactl -- set-sink-volume 0 80%
 
+
+### Check for open ports
+
+    sudo lsof -i -P -n | grep LISTEN
+
