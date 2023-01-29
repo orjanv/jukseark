@@ -86,3 +86,8 @@
 ### cheat function to look up commands
 
     function cheat() { curl cht.sh/$1 }
+    
+### Show hexcolor
+
+    showcolor() { display -size 400x400 xc:"#${1}"; }
+
