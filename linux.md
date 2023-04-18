@@ -74,3 +74,8 @@ Set volume to 80%
 ## Find out if you are runnig wayland or X
 
     loginctl show-session $(loginctl show-user $(whoami) -p Display --value) -p Type --value
+
+
+## sync onedrive to linux
+
+    https://itsfoss.com/use-onedrive-linux-rclone/
