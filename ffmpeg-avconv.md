@@ -52,3 +52,11 @@
 
 ## Convert a series of .jpg-files into a video with a given quality and framerate
    ffmpeg -framerate 15 -pattern_type glob -i 'DSC*.JPG' -s 1920x1080 -c:v libx264 -crf 20 -pix_fmt yuv420p aurora-30112021-up-15fps.mp4
+
+To make a 4K video from high resolution images, resize them first:
+
+   mogrify -resize 3840x2560! DSC*.JPG
+
+Then do the timelapse-thing:
+
+   ffmpeg -framerate 15 -pattern_type glob -i 'DSC*.JPG' -vf "fps=15,scale=-1:2160:flags=lanczos" -c:v libx264 -crf 25 aurora-17112021-15fps-4k.mp4
