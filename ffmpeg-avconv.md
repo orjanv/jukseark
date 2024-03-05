@@ -49,3 +49,6 @@
 
 ## Convert multiple .webm audio files to .mp3 in one go
    find -name "*.webm" -exec ffmpeg -i {} -acodec libmp3lame -ab 128k {}.mp3 \;
+
+## Convert a series of .jpg-files into a video with a given quality and framerate
+   ffmpeg -framerate 15 -pattern_type glob -i 'DSC*.JPG' -s 1920x1080 -c:v libx264 -crf 20 -pix_fmt yuv420p aurora-30112021-up-15fps.mp4
